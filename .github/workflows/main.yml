@@ -1,14 +1,8 @@
 name: Trying to call
-
+ 
 on:
   workflow_dispatch:
 
 jobs:
-  main_job:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Trying to call
-        uses: thunsudamn/workflows-action/.github/workflows/checking.yml@main
+  checkout:
+    uses: thunsudamn/workflows-action/.github/workflows/checking.yml@main
