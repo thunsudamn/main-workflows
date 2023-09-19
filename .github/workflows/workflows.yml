@@ -15,3 +15,5 @@ jobs:
         uses: actions/workflow-run@v1
         with:
           workflow: .github/workflows/subworkflow.yml
+        secrets: 
+          PAT_FOR_WORKFLOWS: ${{ secrets.PAT_FOR_WORKFLOWS }}
