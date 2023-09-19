@@ -1,0 +1,17 @@
+name: Workflow runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mainworkflow_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Subworkflow
+        uses: actions/workflow-run@v1
+        with:
+          workflow: .github/workflows/subworkflow.yml
