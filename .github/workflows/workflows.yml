@@ -14,6 +14,6 @@ jobs:
       - name: Run Subworkflow
         uses: actions/workflow-run@v1
         with:
-          workflow: .github/workflows/subworkflow.yml
+          workflow: workflows-action/.github/workflows/checking.yml
         secrets: 
           PAT_FOR_WORKFLOWS: ${{ secrets.PAT_FOR_WORKFLOWS }}
