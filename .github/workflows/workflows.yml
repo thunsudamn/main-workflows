@@ -2,6 +2,12 @@ name: Workflow runner
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+
+env: 
+  PAT_FOR_WORKFLOWS: ${{ secrets.PAT_FOR_WORKFLOWS }}
 
 jobs:
   mainworkflow_job:
@@ -10,8 +16,5 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
       - name: Run Subworkflow
         uses: thunsudamn/workflows-action/.github/workflows/checking.yml@main
-        secrets:
-          PAT_FOR_WORKFLOWS: ${{ secrets.PAT_FOR_WORKFLOWS }}
