@@ -3,6 +3,9 @@ name: Trying to call
 on:
   workflow_dispatch:
 
+env:
+  PAT_FOR_WORKFLOWS: ${{ secrets.PAT_FOR_WORKFLOWS }}
+
 jobs:
   checkout:
     uses: thunsudamn/workflows-action/.github/workflows/checking.yml@main
