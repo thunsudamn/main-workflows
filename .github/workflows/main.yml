@@ -11,5 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Subworkflow
-        uses: thunsudamn/workflows-action/.github/workflows/checking.yml@main
+jobs:
+  checking:
+    runs-on: ubuntu-latest
+    uses: thunsudamn/workflows-action/.github/workflows/checking.yml@main
