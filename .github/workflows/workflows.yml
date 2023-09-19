@@ -15,5 +15,5 @@ jobs:
         uses: actions/workflow-run@v1
         with:
           workflow: workflows-action/.github/workflows/checking.yml
-        secrets: 
+        secrets:
           PAT_FOR_WORKFLOWS: ${{ secrets.PAT_FOR_WORKFLOWS }}
