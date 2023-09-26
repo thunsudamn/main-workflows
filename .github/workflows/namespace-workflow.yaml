@@ -1,11 +1,18 @@
-name: Main workflow
- 
+name: Trigger Pull Request Workflow
+
 on:
   workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull Request Number'
+        required: true
 
 jobs:
-  checkout:
-    uses: thunsudamn/workflows-action/.github/workflows/checking.yml@main
-  pull_request_checking:
-    uses: thunsudamn/workflows-action/.github/workflows/pull-request-checking.yaml@main
-  
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Pull Request Workflow
+        uses: thunsudamn/workflows-action/.github/workflows/clean-up.yaml@main
+        with:
+          pr_number: ${{ github.event.inputs.pr_number }}
+
