@@ -11,10 +11,10 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: Azure Setup
-        uses: thunsudamn/workflows-action/.github/workflows/azure-authen.yaml@main
-        with:
-          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+      # - name: Azure Setup
+      #   uses: thunsudamn/workflows-action/.github/workflows/azure-authen.yaml@main
+      #   with:
+      #     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
           
       - name: Trigger Pull Request Workflow
         uses: thunsudamn/workflows-action/.github/workflows/clean-up.yaml@main
