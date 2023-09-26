@@ -2,10 +2,6 @@ name: Trigger Pull Request Workflow
 
 on:
   workflow_dispatch:
-    inputs:
-      pr_number:
-        description: 'Pull Request Number'
-        required: true
 
 jobs:
   trigger_pr:
