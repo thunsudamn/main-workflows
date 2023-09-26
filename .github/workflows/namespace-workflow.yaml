@@ -12,6 +12,6 @@ jobs:
     uses: thunsudamn/workflows-action/.github/workflows/clean-up.yaml@main 
     with:
       pr_number: ${{ github.event.inputs.pr_number }}
-      SourceCodeBranch: ${{github.ref_name}}
-    secrets:
-      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+    #   SourceCodeBranch: ${{github.ref_name}}
+    # secrets:
+    #   AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
