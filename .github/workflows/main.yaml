@@ -1,4 +1,4 @@
-name: Trying to call
+name: Main workflow
  
 on:
   workflow_dispatch:
