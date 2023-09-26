@@ -2,18 +2,16 @@ name: Trigger Pull Request Workflow
 
 on:
   workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull Request Number'
+        required: true
 
 jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      # - name: Azure Setup
-      #   uses: thunsudamn/workflows-action/.github/workflows/azure-authen.yaml@main
-      #   with:
-      #     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
-          
-      - name: Trigger Pull Request Workflow
-        uses: thunsudamn/workflows-action/.github/workflows/clean-up.yaml@main
+      - name: Trigger Subworkflow
+        uses: thunsuda/workflows-action/.github/actions/clean-up-namespace.yaml@main 
         with:
           pr_number: ${{ github.event.inputs.pr_number }}
-
