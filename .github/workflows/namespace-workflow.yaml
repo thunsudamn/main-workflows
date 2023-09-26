@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  trigger_pr:
+  trigger:
     runs-on: ubuntu-latest
     steps:
       # - name: Azure Setup
