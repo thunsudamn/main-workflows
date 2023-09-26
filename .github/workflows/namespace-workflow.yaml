@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Subworkflow
-        uses: thunsudamn/workflows-action/.github/actions/clean-up-namespace.yaml@main 
+        uses: thunsudamn/workflows-action/.github/workflows/clean-up.yaml@main 
         with:
           pr_number: ${{ github.event.inputs.pr_number }}
