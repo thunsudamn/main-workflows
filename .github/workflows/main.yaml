@@ -6,5 +6,6 @@ on:
 jobs:
   checkout:
     uses: thunsudamn/workflows-action/.github/workflows/checking.yml@main
-  second_check:
-    uses: thunsudamn/workflows-action/.github/workflows/second-checking.yml@main
+  pull_request_checking:
+    uses: thunsudamn/workflows-action/.github/workflows/pull-request-checking.yaml@main
+  
